@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARRELS & BORDERS | EU–India Spirits Matchmaking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Sohne:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-dark: #0f0f0f;
+            --color-charcoal: #1a1a1a;
+            --color-burgundy: #6b2c2c;
+            --color-burgundy-light: #8b3a3a;
+            --color-amber: #b8860b;
+            --color-gold: #d4af37;
+            --color-cream: #f5f3f0;
+            --color-light-grey: #e8e6e3;
+            --color-text: #2a2a2a;
+            --color-text-light: #5a5a5a;
+            --font-serif: 'Crimson Text', serif;
+            --font-sans: 'Sohne', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-text);
+            background: var(--color-cream);
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--color-light-grey);
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--color-dark);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--color-burgundy);
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--color-text);
+            text-decoration: none;
+            margin-left: 2.5rem;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-burgundy);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-header {
+            background: var(--color-burgundy);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            border: none;
+        }
+
+        .cta-header:hover {
+            background: var(--color-burgundy-light);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            margin-top: 4rem;
+            padding: 6rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--color-cream) 0%, rgba(107, 44, 44, 0.03) 100%);
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--color-dark);
+            font-weight: 700;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero .tagline {
+            font-size: 1.25rem;
+            color: var(--color-burgundy);
+            margin-bottom: 2rem;
+            font-weight: 500;
+            animation: fadeInUp 0.8s ease-out 0.35s both;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.5s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.65s both;
+        }
+
+        .btn-primary {
+            background: var(--color-burgundy);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+            font-family: var(--font-sans);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-burgundy-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(107, 44, 44, 0.15);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-burgundy);
+            padding: 1rem 2rem;
+            border: 2px solid var(--color-burgundy);
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: var(--font-sans);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-burgundy);
+            color: white;
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 400px;
+            animation: fadeInUp 0.8s ease-out 0.45s both;
+        }
+
+        .visual-card {
+            position: absolute;
+            background: white;
+            border-radius: 4px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-1 {
+            top: 0;
+            left: 0;
+            width: 280px;
+            border-top: 4px solid var(--color-burgundy);
+        }
+
+        .card-2 {
+            top: 120px;
+            right: 0;
+            width: 300px;
+            border-left: 4px solid var(--color-gold);
+        }
+
+        .visual-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--color-dark);
+        }
+
+        .visual-card p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            line-height: 1.6;
+        }
+
+        .stat {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--color-burgundy);
+            font-weight: 700;
+        }
+
+        /* ===== SECTION: WHY NOW ===== */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            color: var(--color-dark);
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--color-burgundy);
+        }
+
+        .why-now {
+            background: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .why-card {
+            padding: 2.5rem 2rem;
+            border-radius: 4px;
+            background: var(--color-cream);
+            border-left: 4px solid var(--color-burgundy);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(184, 134, 11, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(107, 44, 44, 0.12);
+            border-left-color: var(--color-gold);
+        }
+
+        .why-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--color-dark);
+        }
+
+        .why-card p {
+            color: var(--color-text-light);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* ===== SECTION: WHAT WE DO ===== */
+        .what-we-do {
+            background: var(--color-charcoal);
+            color: white;
+        }
+
+        .what-we-do .section-title {
+            color: var(--color-cream);
+        }
+
+        .what-we-do .section-title::after {
+            background: var(--color-gold);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3.5rem;
+        }
+
+        .service-item {
+            padding: 2rem;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s;
+        }
+
+        .service-item:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--color-gold);
+            transform: translateX(8px);
+        }
+
+        .service-item h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-gold);
+        }
+
+        .service-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-item li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .service-item li::before {
+            content: '▪';
+            position: absolute;
+            left: 0;
+            color: var(--color-gold);
+            font-weight: bold;
+        }
+
+        .service-description {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* ===== SECTION: FOR EU PRODUCERS ===== */
+        .segment-section {
+            background: white;
+            padding: 5rem 2rem;
+        }
+
+        .segment-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 3.5rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+
+        .segment-container.reverse {
+            grid-template-columns: 1.1fr 1fr;
+        }
+
+        .segment-container.reverse .segment-content {
+            order: 2;
+        }
+
+        .segment-container.reverse .segment-visual {
+            order: 1;
+        }
+
+        .segment-content h2 {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            color: var(--color-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .segment-content p {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .segment-highlights {
+            background: var(--color-cream);
+            padding: 2rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+        }
+
+        .segment-highlights h3 {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--color-burgundy);
+        }
+
+        .highlight-list {
+            list-style: none;
+        }
+
+        .highlight-list li {
+            padding: 0.5rem 0;
+            color: var(--color-text);
+            position: relative;
+            padding-left: 1.8rem;
+            font-size: 0.95rem;
+        }
+
+        .highlight-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-burgundy);
+            font-weight: bold;
+        }
+
+        .segment-visual {
+            background: linear-gradient(135deg, rgba(107, 44, 44, 0.1) 0%, rgba(184, 134, 11, 0.08) 100%);
+            padding: 3rem;
+            border-radius: 4px;
+            border: 1px solid var(--color-light-grey);
+            text-align: center;
+        }
+
+        .segment-visual-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .segment-visual h3 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            color: var(--color-burgundy);
+            margin-bottom: 1rem;
+        }
+
+        .segment-visual p {
+            color: var(--color-text-light);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* ===== SECTION: TRACK RECORD ===== */
+        .track-record {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.02) 0%, rgba(184, 134, 11, 0.05) 100%);
+            padding: 5rem 2rem;
+        }
+
+        .track-record .section-title {
+            margin-bottom: 3rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(107, 44, 44, 0.1);
+        }
+
+        .stat-card .stat-number {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--color-burgundy);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card p {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+        }
+
+        .deal-snapshot {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 4px;
+            border-left: 5px solid var(--color-gold);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .deal-snapshot h3 {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            color: var(--color-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .deal-details {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .deal-detail {
+            padding-bottom: 1rem;
+        }
+
+        .deal-detail-label {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .deal-detail-value {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-burgundy);
+            font-weight: 700;
+        }
+
+        /* ===== SECTION: PROCESS ===== */
+        .process {
+            background: white;
+            padding: 5rem 2rem;
+        }
+
+        .process-timeline {
+            max-width: 1000px;
+            margin: 4rem auto 0;
+        }
+
+        .process-step {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .process-step::after {
+            content: '';
+            position: absolute;
+            left: 59px;
+            top: 80px;
+            width: 2px;
+            height: calc(100% + 2rem);
+            background: var(--color-light-grey);
+        }
+
+        .process-step:last-child::after {
+            display: none;
+        }
+
+        .step-number {
+            width: 120px;
+            height: 120px;
+            background: var(--color-burgundy);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .step-content p {
+            color: var(--color-text-light);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* ===== SECTION: CTA ===== */
+        .cta-section {
+            background: var(--color-burgundy);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-light {
+            background: white;
+            color: var(--color-burgundy);
+            padding: 1rem 2rem;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+            font-family: var(--font-sans);
+        }
+
+        .btn-light:hover {
+            background: var(--color-cream);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: var(--font-sans);
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--color-burgundy);
+        }
+
+        .contact-info {
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--color-dark);
+            color: var(--color-cream);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .segment-container,
+            .segment-container.reverse {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .deal-details {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .process-step {
+                grid-template-columns: 1fr;
+            }
+
+            .step-number {
+                width: 80px;
+                height: 80px;
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">BARRELS <span>&</span> BORDERS</a>
+            <nav>
+                <a href="#why-now">Why Now</a>
+                <a href="#what-we-do">What We Do</a>
+                <a href="#for-eu">For Producers</a>
+                <a href="#for-india">For Bottlers</a>
+                <a href="#process">Process</a>
+            </nav>
+            <button class="cta-header">Schedule a Call</button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div>
+                <h1>Cross-Border Spirits, Done Right</h1>
+                <p class="tagline">EU–India Spirits Matchmaking. Executed in 90 Days.</p>
+                <p>Barrels & Borders connects European spirit producers with Indian bottlers at the exact moment tariffs collapse and opportunity opens.</p>
+                <p>With the EU–India FTA reducing spirits duties from 150% to 40%, we help both sides move fast — compliantly, profitably, and without inventory risk.</p>
+                <div class="hero-cta">
+                    <button class="btn-primary">I'm a Producer</button>
+                    <button class="btn-secondary">I'm a Bottler</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-card card-1">
+                    <h3>€750K</h3>
+                    <p class="stat">Total Value Closed</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-light);">In 60 days</p>
+                </div>
+                <div class="visual-card card-2">
+                    <h3>3 Deals</h3>
+                    <p style="margin-top: 1rem;">EU-India spirits contracts signed and in motion. Real volume. Real margin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY NOW -->
+    <section class="why-now" id="why-now">
+        <div class="section">
+            <h2 class="section-title">Why Now: The EU–India Spirits Opportunity</h2>
+            <div class="why-grid">
+                <div class="why-card scroll-reveal">
+                    <h3>Tariff Arbitrage, Finally Real</h3>
+                    <p>EU base spirits can now land in India at commercially viable costs — unlocking immediate margin expansion for both producer and bottler.</p>
+                </div>
+                <div class="why-card scroll-reveal">
+                    <h3>A 3 Million Litre Market Gap</h3>
+                    <p>India's urban premium segment (₹1,800–3,500 retail) is growing at 18%+ CAGR. Demand for consistent, "European origin" base spirits exceeds local supply.</p>
+                </div>
+                <div class="why-card scroll-reveal">
+                    <h3>First-Mover Advantage</h3>
+                    <p>Early EU suppliers and Indian bottlers secure brand positioning, shelf presence, and long-term contracts before the market crowds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section class="what-we-do" id="what-we-do">
+        <div class="section">
+            <h2 class="section-title">What We Do</h2>
+            <div class="services-grid">
+                <div class="service-item scroll-reveal">
+                    <h3>Targeted Matchmaking</h3>
+                    <p>We pre-qualify EU producers and Indian bottlers to ensure technical, commercial, and regulatory fit.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <h3>Compliance & Structuring</h3>
+                    <p>FSSAI, state excise, labelling, origin claims — handled correctly from day one.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <h3>Deal Execution</h3>
+                    <p>From first call to trial container, we broker your initial shipment and set the foundation for scale.</p>
+                </div>
+                <div class="service-item scroll-reveal">
+                    <h3>No Inventory. No Guesswork.</h3>
+                    <p>We operate on a success-based commission (5%) — aligned to close real deals, not decks.</p>
+                </div>
+            </div>
+            <p style="color: rgba(255,255,255,0.8); margin-top: 2rem; text-align: center; font-size: 1.1rem;">
+                <strong>We don't trade bottles. We build bankable cross-border deals.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- FOR EU PRODUCERS -->
+    <section class="segment-section" id="for-eu">
+        <div class="segment-container">
+            <div class="segment-content">
+                <h2>For EU Spirit Producers</h2>
+                <p>Enter India's 5th Largest Spirits Market — the Right Way</p>
+                
+                <div class="segment-highlights">
+                    <h3>Access Pre-Qualified Bottlers</h3>
+                    <ul class="highlight-list">
+                        <li>Maharashtra & Karnataka bottling partners</li>
+                        <li>Proven IMFL distribution networks</li>
+                        <li>Capacity for trial → commercial scale</li>
+                    </ul>
+                </div>
+
+                <div class="segment-highlights">
+                    <h3>Products in Demand</h3>
+                    <ul class="highlight-list">
+                        <li>96% neutral spirit (vodka/gin base)</li>
+                        <li>Grain whisky bases</li>
+                        <li>Rum distillates</li>
+                    </ul>
+                </div>
+
+                <div class="segment-highlights">
+                    <h3>What We Handle</h3>
+                    <ul class="highlight-list">
+                        <li>FSSAI & excise compliance</li>
+                        <li>"European Origin" positioning</li>
+                        <li>Trial shipments (20–50 ton containers)</li>
+                    </ul>
+                </div>
+
+                <p style="margin-top: 2rem; font-size: 1rem; color: var(--color-burgundy); font-weight: 600;">Typical first-year contracts: €200K–€400K</p>
+                <p style="color: var(--color-text-light); margin-top: 1rem;">Be early. Be compliant. Be profitable.</p>
+            </div>
+            <div class="segment-visual">
+                <div class="segment-visual-icon">🍇</div>
+                <h3>90-Day Deal Path</h3>
+                <p>Discovery → Shortlist → MoU + Trial → Scale</p>
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--color-text-light); line-height: 1.7;">
+                    First 3 matches: <strong>Free introductory service</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOR INDIAN BOTTLERS -->
+    <section class="segment-section" id="for-india" style="background: #fafaf8;">
+        <div class="segment-container reverse">
+            <div class="segment-content">
+                <h2>For Indian Bottlers & Brand Owners</h2>
+                <p>Upgrade Your IMFL Portfolio with EU Base Spirits</p>
+                
+                <div class="segment-highlights">
+                    <h3>Premium EU Inputs</h3>
+                    <ul class="highlight-list">
+                        <li>Neutral & grain alcohol at FTA-advantaged costs</li>
+                        <li>Organic-certified options available</li>
+                        <li>Superior consistency vs local rectified spirit</li>
+                    </ul>
+                </div>
+
+                <div class="segment-highlights">
+                    <h3>Perfect For</h3>
+                    <ul class="highlight-list">
+                        <li>Vodka blends & variants</li>
+                        <li>Whisky expressions & limited editions</li>
+                        <li>Gin & premium spirits (₹1,800–3,500 retail)</li>
+                    </ul>
+                </div>
+
+                <div class="segment-highlights">
+                    <h3>Your Upside</h3>
+                    <ul class="highlight-list">
+                        <li>18%+ base cost reduction post-FTA</li>
+                        <li>Improved margins on premium SKUs</li>
+                        <li>"European origin" shelf positioning</li>
+                    </ul>
+                </div>
+
+                <p style="margin-top: 2rem; font-size: 1rem; color: var(--color-burgundy); font-weight: 600;">Start small with 20ft container trials</p>
+                <p style="color: var(--color-text-light); margin-top: 1rem;">European origin isn't a claim. It's a strategy.</p>
+            </div>
+            <div class="segment-visual">
+                <div class="segment-visual-icon">🥃</div>
+                <h3>Compliant Supply</h3>
+                <p>FTA-optimized, FSSAI approved, state-excise ready</p>
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--color-text-light); line-height: 1.7;">
+                    Trial to commercial scale in <strong>90 days</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRACK RECORD -->
+    <section class="track-record">
+        <div class="section">
+            <h2 class="section-title">Our Track Record</h2>
+            <div class="stats-grid">
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">3</div>
+                    <p>Deals Closed</p>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">€750K</div>
+                    <p>Total Value</p>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">60</div>
+                    <p>Days to Close</p>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">100%</div>
+                    <p>Compliant Execution</p>
+                </div>
+            </div>
+
+            <div class="deal-snapshot scroll-reveal">
+                <h3>Recent Deal Snapshot</h3>
+                <p style="color: var(--color-text-light); margin-bottom: 1.5rem;">EU Neutral Spirit Producer → Maharashtra Bottler</p>
+                <div class="deal-details">
+                    <div class="deal-detail">
+                        <div class="deal-detail-label">Volume</div>
+                        <div class="deal-detail-value">20 tons</div>
+                    </div>
+                    <div class="deal-detail">
+                        <div class="deal-detail-label">Proof</div>
+                        <div class="deal-detail-value">96%</div>
+                    </div>
+                    <div class="deal-detail">
+                        <div class="deal-detail-label">Contract Value</div>
+                        <div class="deal-detail-value">€220K</div>
+                    </div>
+                    <div class="deal-detail">
+                        <div class="deal-detail-label">Cost Savings</div>
+                        <div class="deal-detail-value">18%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process">
+        <div class="section">
+            <h2 class="section-title">Our 90-Day Process</h2>
+            <div class="process-timeline">
+                <div class="process-step scroll-reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Discovery Call (15 minutes)</h3>
+                        <p>We understand your product specs, compliance readiness, and commercial goals. Fast. No homework required.</p>
+                    </div>
+                </div>
+                <div class="process-step scroll-reveal">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Partner Shortlist (3–5 matches by Week 2)</h3>
+                        <p>Pre-qualified bottlers (India) or producers (EU) matched to your product and scale expectations.</p>
+                    </div>
+                </div>
+                <div class="process-step scroll-reveal">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>MoU + Trial Shipment (by Month 3)</h3>
+                        <p>Signed terms, sample shipment in motion, compliance checks complete. Real momentum.</p>
+                    </div>
+                </div>
+                <div class="process-step scroll-reveal">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Scale or Repeat</h3>
+                        <p>Your deal works. Next shipment booked, or we find your next partner. Momentum builds fast.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to Cross Borders?</h2>
+        <p>EU Producers: Access your Indian bottler shortlist<br>Indian Bottlers: Source premium EU base spirit</p>
+        <div class="cta-buttons">
+            <button class="btn-light">Schedule a Call</button>
+            <button class="btn-outline">hello@barrelsandborders.com</button>
+        </div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>📅</span>
+                <a href="#" style="color: white; text-decoration: none;">Schedule a Call</a>
+            </div>
+            <div class="contact-item">
+                <span>📧</span>
+                <a href="mailto:hello@barrelsandborders.com" style="color: white; text-decoration: none;">hello@barrelsandborders.com</a>
+            </div>
+            <div class="contact-item">
+                <span>📞</span>
+                <span>+44 7xxx xxx xxx</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 BARRELS & BORDERS. Spirits & Commerce, Aligned.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll behavior for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                }
+            });
+        });
+
+        // Button interactions
+        document.querySelectorAll('button.cta-header, button.btn-primary, button.btn-secondary, button.btn-light').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Contact form would open here. This is a placeholder.');
+            });
+        });
+    </script>
+</body>
+</html>
