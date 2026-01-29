@@ -6,7 +6,7 @@
     <title>BARRELS & BORDERS | EU–India Spirits Matchmaking</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,21 +15,17 @@
         }
 
         :root {
-            --color-black: #0a0a0a;
-            --color-dark-gray: #1a1a1a;
-            --color-gray-900: #2a2a2a;
-            --color-gray-700: #4a4a4a;
-            --color-gray-500: #6a6a6a;
-            --color-gray-300: #b8b8b8;
-            --color-gray-100: #e0e0e0;
             --color-white: #ffffff;
-            --color-steel: #4a5568;
-            --color-accent: #2563eb;
-            --color-text: #1a1a1a;
-            --color-text-light: #4a4a4a;
-            --color-bg: #f5f5f5;
-            --font-mono: 'IBM Plex Mono', monospace;
-            --font-sans: 'IBM Plex Sans', sans-serif;
+            --color-off-white: #fafaf9;
+            --color-light-gray: #f5f3f0;
+            --color-gray: #a8a39d;
+            --color-dark-gray: #2c2a28;
+            --color-black: #1a1815;
+            --color-accent: #8b6f47;
+            --color-text: #2c2a28;
+            --color-text-light: #6b6b6b;
+            --font-display: 'Crimson Text', serif;
+            --font-sans: 'Outfit', sans-serif;
         }
 
         html {
@@ -40,8 +36,8 @@
             font-family: var(--font-sans);
             color: var(--color-text);
             background: var(--color-white);
-            line-height: 1.6;
-            letter-spacing: -0.3px;
+            line-height: 1.7;
+            letter-spacing: 0;
         }
 
         /* ===== HEADER ===== */
@@ -52,7 +48,7 @@
             background: var(--color-white);
             backdrop-filter: none;
             z-index: 1000;
-            border-bottom: 1px solid var(--color-gray-100);
+            border-bottom: 1px solid var(--color-light-gray);
             animation: slideDown 0.6s ease-out;
         }
 
@@ -68,19 +64,19 @@
         }
 
         .header-content {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
+            padding: 1.5rem 2rem;
         }
 
         .logo {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 3px;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
             color: var(--color-black);
             text-decoration: none;
             text-transform: uppercase;
@@ -91,15 +87,14 @@
         }
 
         nav a {
-            font-size: 0.8rem;
-            font-weight: 500;
+            font-size: 0.85rem;
+            font-weight: 400;
             color: var(--color-text);
             text-decoration: none;
-            margin-left: 3rem;
+            margin-left: 2.5rem;
             position: relative;
-            transition: color 0.2s;
+            transition: color 0.3s;
             letter-spacing: 0.5px;
-            text-transform: uppercase;
         }
 
         nav a::after {
@@ -110,7 +105,11 @@
             width: 0;
             height: 1px;
             background: var(--color-accent);
-            transition: width 0.2s;
+            transition: width 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--color-accent);
         }
 
         nav a:hover::after {
@@ -118,48 +117,47 @@
         }
 
         .cta-header {
-            background: var(--color-black);
-            color: white;
-            padding: 0.6rem 1.4rem;
+            background: transparent;
+            color: var(--color-accent);
+            padding: 0.7rem 1.6rem;
             border-radius: 0;
-            font-weight: 600;
-            font-size: 0.75rem;
+            font-weight: 500;
+            font-size: 0.8rem;
             cursor: pointer;
-            transition: all 0.2s;
-            border: none;
+            transition: all 0.3s;
+            border: 1px solid var(--color-accent);
             font-family: var(--font-sans);
             letter-spacing: 0.5px;
-            text-transform: uppercase;
         }
 
         .cta-header:hover {
             background: var(--color-accent);
-            transform: none;
+            color: white;
         }
 
         /* ===== HERO SECTION ===== */
         .hero {
-            margin-top: 3.5rem;
-            padding: 6rem 2rem 5rem;
+            margin-top: 4rem;
+            padding: 7rem 2rem 6rem;
             background: var(--color-white);
         }
 
         .hero-content {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 5rem;
+            grid-template-columns: 1fr;
+            gap: 4rem;
             align-items: center;
         }
 
         .hero h1 {
-            font-family: var(--font-sans);
-            font-size: 3.5rem;
-            line-height: 1;
+            font-family: var(--font-display);
+            font-size: 3.8rem;
+            line-height: 1.1;
             margin-bottom: 1.5rem;
             color: var(--color-black);
-            font-weight: 700;
+            font-weight: 600;
             animation: fadeInUp 0.8s ease-out 0.2s both;
             letter-spacing: -1px;
         }
@@ -176,84 +174,84 @@
         }
 
         .hero .tagline {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: var(--color-accent);
             margin-bottom: 2rem;
-            font-weight: 600;
+            font-weight: 500;
             animation: fadeInUp 0.8s ease-out 0.35s both;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
         .hero p {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: var(--color-text-light);
             margin-bottom: 1.5rem;
-            line-height: 1.7;
+            line-height: 1.8;
             animation: fadeInUp 0.8s ease-out 0.5s both;
+            max-width: 600px;
         }
 
         .hero-cta {
             display: flex;
-            gap: 1rem;
+            gap: 1.2rem;
             animation: fadeInUp 0.8s ease-out 0.65s both;
         }
 
         .btn-primary {
-            background: var(--color-black);
+            background: var(--color-accent);
             color: white;
-            padding: 0.9rem 1.8rem;
+            padding: 0.95rem 2rem;
             border-radius: 0;
-            font-weight: 600;
-            font-size: 0.8rem;
+            font-weight: 500;
+            font-size: 0.85rem;
             cursor: pointer;
             border: none;
-            transition: all 0.2s;
+            transition: all 0.3s;
             font-family: var(--font-sans);
             letter-spacing: 0.5px;
-            text-transform: uppercase;
         }
 
         .btn-primary:hover {
-            background: var(--color-accent);
+            background: var(--color-black);
             transform: none;
             box-shadow: none;
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--color-text);
-            padding: 0.9rem 1.8rem;
-            border: 1px solid var(--color-gray-500);
+            color: var(--color-accent);
+            padding: 0.95rem 2rem;
+            border: 1px solid var(--color-accent);
             border-radius: 0;
-            font-weight: 600;
-            font-size: 0.8rem;
+            font-weight: 500;
+            font-size: 0.85rem;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s;
             font-family: var(--font-sans);
             letter-spacing: 0.5px;
-            text-transform: uppercase;
         }
 
         .btn-secondary:hover {
-            background: var(--color-black);
+            background: var(--color-accent);
             color: white;
-            border-color: var(--color-black);
+            border-color: var(--color-accent);
         }
 
         .hero-visual {
             position: relative;
             height: 400px;
             animation: fadeInUp 0.8s ease-out 0.45s both;
+            display: none;
         }
 
         .visual-card {
             position: absolute;
-            background: var(--color-gray-50);
+            background: var(--color-light-gray);
             border-radius: 0;
             padding: 2rem;
             box-shadow: none;
-            border: 1px solid var(--color-gray-100);
+            border: 1px solid var(--color-light-gray);
         }
 
         .card-1 {
@@ -269,15 +267,15 @@
             right: 0;
             width: 300px;
             border-left: none;
-            border-left: 3px solid var(--color-steel);
+            border-left: 3px solid var(--color-gray);
         }
 
         .visual-card h3 {
-            font-family: var(--font-sans);
+            font-family: var(--font-display);
             font-size: 2rem;
             margin-bottom: 0.5rem;
             color: var(--color-black);
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .visual-card p {
@@ -290,34 +288,34 @@
             font-family: var(--font-sans);
             font-size: 1rem;
             color: var(--color-text);
-            font-weight: 600;
+            font-weight: 500;
         }
 
         /* ===== SECTION: WHY NOW ===== */
         .section {
             padding: 5rem 2rem;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-family: var(--font-sans);
-            font-size: 2.2rem;
+            font-family: var(--font-display);
+            font-size: 2.5rem;
             color: var(--color-black);
             margin-bottom: 3rem;
             position: relative;
             display: inline-block;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: -0.5px;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -12px;
+            bottom: -16px;
             left: 0;
-            width: 40px;
-            height: 2px;
+            width: 60px;
+            height: 1px;
             background: var(--color-accent);
         }
 
@@ -328,57 +326,44 @@
         .why-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 2.5rem;
             margin-top: 4rem;
         }
 
         .why-card {
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 0;
             background: transparent;
-            border: 1px solid var(--color-gray-100);
-            border-left: 3px solid var(--color-accent);
-            transition: all 0.2s;
+            border: none;
+            border-top: 1px solid var(--color-light-gray);
+            transition: all 0.3s;
             position: relative;
             overflow: hidden;
-        }
-
-        .why-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            background: none;
-            border-radius: 50%;
-            pointer-events: none;
         }
 
         .why-card:hover {
             transform: none;
             box-shadow: none;
-            border-left-color: var(--color-steel);
-            background: var(--color-bg);
+            border-top-color: var(--color-accent);
         }
 
         .why-card h3 {
-            font-family: var(--font-sans);
-            font-size: 1.1rem;
+            font-family: var(--font-display);
+            font-size: 1.3rem;
             margin-bottom: 1rem;
             color: var(--color-black);
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .why-card p {
             color: var(--color-text-light);
-            line-height: 1.7;
+            line-height: 1.8;
             font-size: 0.95rem;
         }
 
         /* ===== SECTION: WHAT WE DO ===== */
         .what-we-do {
-            background: var(--color-dark-gray);
+            background: var(--color-black);
             color: white;
         }
 
@@ -392,31 +377,32 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
             margin-top: 3.5rem;
         }
 
         .service-item {
-            padding: 2rem;
+            padding: 2.5rem;
             background: transparent;
             border-radius: 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.2s;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s;
         }
 
         .service-item:hover {
-            background: rgba(255, 255, 255, 0.05);
+            background: transparent;
             border-color: var(--color-accent);
             transform: none;
         }
 
         .service-item h3 {
-            font-family: var(--font-sans);
-            font-size: 1.1rem;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
             margin-bottom: 1rem;
-            color: var(--color-accent);
-            font-weight: 700;
+            color: white;
+            font-weight: 600;
         }
 
         .service-item ul {
@@ -425,17 +411,17 @@
         }
 
         .service-item li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
+            padding: 0.6rem 0;
+            padding-left: 0;
             position: relative;
             color: rgba(255, 255, 255, 0.85);
             font-size: 0.95rem;
         }
 
         .service-item li::before {
-            content: '—';
+            content: '·';
             position: absolute;
-            left: 0;
+            left: -12px;
             color: var(--color-accent);
             font-weight: bold;
         }
@@ -455,18 +441,22 @@
             padding: 5rem 2rem;
         }
 
+        .segment-india {
+            background: var(--color-off-white);
+        }
+
         .segment-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1.1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: flex-start;
             margin-bottom: 6rem;
         }
 
         .segment-container.reverse {
-            grid-template-columns: 1.1fr 1fr;
+            grid-template-columns: 1fr 1fr;
         }
 
         .segment-container.reverse .segment-content {
@@ -478,18 +468,18 @@
         }
 
         .segment-content h2 {
-            font-family: var(--font-sans);
-            font-size: 1.8rem;
+            font-family: var(--font-display);
+            font-size: 2rem;
             color: var(--color-black);
             margin-bottom: 0.8rem;
             line-height: 1.2;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .segment-content > p:nth-of-type(1) {
             font-size: 0.9rem;
             color: var(--color-accent);
-            font-weight: 600;
+            font-weight: 500;
             letter-spacing: 0.5px;
             text-transform: uppercase;
             margin-bottom: 2rem;
@@ -507,16 +497,17 @@
             padding: 2rem;
             border-radius: 0;
             margin: 2rem 0;
-            border: 1px solid var(--color-gray-100);
-            border-left: 3px solid var(--color-accent);
+            border: none;
+            border-left: 1px solid var(--color-accent);
+            border-top: 1px solid var(--color-light-gray);
         }
 
         .segment-highlights h3 {
-            font-family: var(--font-sans);
-            font-size: 1rem;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
             margin-bottom: 1rem;
             color: var(--color-black);
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .highlight-list {
@@ -524,7 +515,7 @@
         }
 
         .highlight-list li {
-            padding: 0.5rem 0;
+            padding: 0.6rem 0;
             color: var(--color-text-light);
             position: relative;
             padding-left: 1.5rem;
@@ -540,10 +531,10 @@
         }
 
         .segment-visual {
-            background: var(--color-bg);
-            padding: 2rem;
+            background: var(--color-light-gray);
+            padding: 3rem 2rem;
             border-radius: 0;
-            border: 1px solid var(--color-gray-100);
+            border: none;
             text-align: center;
         }
 
@@ -553,11 +544,11 @@
         }
 
         .segment-visual h3 {
-            font-family: var(--font-sans);
-            font-size: 1.3rem;
+            font-family: var(--font-display);
+            font-size: 1.4rem;
             color: var(--color-black);
             margin-bottom: 0.5rem;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .segment-visual p {
@@ -568,7 +559,7 @@
 
         /* ===== SECTION: TRACK RECORD ===== */
         .track-record {
-            background: var(--color-bg);
+            background: var(--color-light-gray);
             padding: 5rem 2rem;
         }
 
@@ -579,32 +570,32 @@
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
+            gap: 2.5rem;
             margin-bottom: 4rem;
         }
 
         .stat-card {
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem;
             background: var(--color-white);
             border-radius: 0;
             box-shadow: none;
-            transition: all 0.2s;
-            border: 1px solid var(--color-gray-100);
+            transition: all 0.3s;
+            border: none;
         }
 
         .stat-card:hover {
             transform: none;
             box-shadow: none;
-            border-color: var(--color-accent);
+            border-color: transparent;
             background: var(--color-white);
         }
 
         .stat-card .stat-number {
-            font-family: var(--font-mono);
-            font-size: 2rem;
+            font-family: var(--font-display);
+            font-size: 2.2rem;
             color: var(--color-accent);
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 0.5rem;
             letter-spacing: -0.5px;
         }
@@ -612,31 +603,31 @@
         .stat-card p {
             color: var(--color-text-light);
             font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 400;
         }
 
         .deal-snapshot {
             background: var(--color-white);
-            padding: 2.5rem;
+            padding: 3rem;
             border-radius: 0;
-            border: 1px solid var(--color-gray-100);
-            border-left: 3px solid var(--color-accent);
+            border: none;
+            border-top: 1px solid var(--color-light-gray);
             box-shadow: none;
         }
 
         .deal-snapshot h3 {
-            font-family: var(--font-sans);
-            font-size: 1.2rem;
+            font-family: var(--font-display);
+            font-size: 1.3rem;
             color: var(--color-black);
             margin-bottom: 0.5rem;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .deal-details {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
         }
 
         .deal-detail {
@@ -650,14 +641,14 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 0.5rem;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .deal-detail-value {
-            font-family: var(--font-mono);
-            font-size: 1.4rem;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
             color: var(--color-accent);
-            font-weight: 700;
+            font-weight: 600;
         }
 
         /* ===== SECTION: PROCESS ===== */
@@ -673,8 +664,8 @@
 
         .process-step {
             display: grid;
-            grid-template-columns: 120px 1fr;
-            gap: 2rem;
+            grid-template-columns: 140px 1fr;
+            gap: 2.5rem;
             margin-bottom: 3rem;
             position: relative;
         }
@@ -682,11 +673,11 @@
         .process-step::after {
             content: '';
             position: absolute;
-            left: 59px;
-            top: 80px;
+            left: 69px;
+            top: 100px;
             width: 1px;
             height: calc(100% + 2rem);
-            background: var(--color-gray-100);
+            background: var(--color-light-gray);
         }
 
         .process-step:last-child::after {
@@ -694,9 +685,9 @@
         }
 
         .step-number {
-            width: 120px;
-            height: 120px;
-            background: var(--color-black);
+            width: 140px;
+            height: 140px;
+            background: var(--color-accent);
             color: white;
             border-radius: 0;
             display: flex;
@@ -704,23 +695,23 @@
             justify-content: center;
             position: relative;
             z-index: 2;
-            font-family: var(--font-mono);
+            font-family: var(--font-display);
             font-size: 1.8rem;
-            font-weight: 700;
+            font-weight: 600;
             flex-shrink: 0;
         }
 
         .step-content h3 {
-            font-family: var(--font-sans);
+            font-family: var(--font-display);
             font-size: 1.2rem;
             color: var(--color-black);
             margin-bottom: 0.8rem;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .step-content p {
             color: var(--color-text-light);
-            line-height: 1.7;
+            line-height: 1.8;
             font-size: 0.95rem;
         }
 
@@ -733,11 +724,11 @@
         }
 
         .cta-section h2 {
-            font-family: var(--font-sans);
-            font-size: 2.2rem;
+            font-family: var(--font-display);
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             line-height: 1.2;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: -0.5px;
         }
 
@@ -749,7 +740,7 @@
 
         .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.2rem;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -757,16 +748,15 @@
         .btn-light {
             background: white;
             color: var(--color-black);
-            padding: 0.9rem 1.8rem;
+            padding: 0.95rem 2rem;
             border-radius: 0;
-            font-weight: 600;
-            font-size: 0.8rem;
+            font-weight: 500;
+            font-size: 0.85rem;
             cursor: pointer;
             border: none;
-            transition: all 0.2s;
+            transition: all 0.3s;
             font-family: var(--font-sans);
             letter-spacing: 0.5px;
-            text-transform: uppercase;
         }
 
         .btn-light:hover {
@@ -778,16 +768,15 @@
         .btn-outline {
             background: transparent;
             color: white;
-            padding: 0.9rem 1.8rem;
+            padding: 0.95rem 2rem;
             border: 1px solid white;
             border-radius: 0;
-            font-weight: 600;
-            font-size: 0.8rem;
+            font-weight: 500;
+            font-size: 0.85rem;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s;
             font-family: var(--font-sans);
             letter-spacing: 0.5px;
-            text-transform: uppercase;
         }
 
         .btn-outline:hover {
@@ -813,17 +802,27 @@
             font-size: 0.95rem;
         }
 
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--color-accent);
+        }
+
         /* ===== FOOTER ===== */
         footer {
-            background: var(--color-dark-gray);
-            color: var(--color-gray-100);
-            padding: 2rem;
+            background: var(--color-black);
+            color: var(--color-gray);
+            padding: 2.5rem;
             text-align: center;
         }
 
         footer p {
             font-size: 0.85rem;
-            opacity: 0.7;
+            opacity: 0.8;
             letter-spacing: 0.3px;
         }
 
@@ -856,7 +855,7 @@
             }
 
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
 
             .hero-visual {
@@ -893,13 +892,13 @@
             }
 
             .step-number {
-                width: 80px;
-                height: 80px;
+                width: 100px;
+                height: 100px;
                 font-size: 1.3rem;
             }
 
             .section-title {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -908,7 +907,7 @@
     <!-- HEADER -->
     <header>
         <div class="header-content">
-            <a href="#" class="logo">BARRELS <span>&</span> BORDERS</a>
+            <a href="#top" class="logo">BARRELS <span>&</span> BORDERS</a>
             <nav>
                 <a href="#why-now">Why Now</a>
                 <a href="#what-we-do">What We Do</a>
@@ -921,7 +920,7 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="top">
         <div class="hero-content">
             <div>
                 <h1>Cross-Border Spirits, Done Right</h1>
@@ -1030,7 +1029,7 @@
                     </ul>
                 </div>
 
-                <p style="margin-top: 2rem; font-size: 1rem; color: var(--color-burgundy); font-weight: 600;">Typical first-year contracts: €200K–€400K</p>
+                <p style="margin-top: 2rem; font-size: 1rem; color: var(--color-accent); font-weight: 600;">Typical first-year contracts: €200K–€400K</p>
                 <p style="color: var(--color-text-light); margin-top: 1rem;">Be early. Be compliant. Be profitable.</p>
             </div>
             <div class="segment-visual">
@@ -1045,7 +1044,7 @@
     </section>
 
     <!-- FOR INDIAN BOTTLERS -->
-    <section class="segment-section" id="for-india" style="background: #fafaf8;">
+    <section class="segment-section segment-india" id="for-india">
         <div class="segment-container reverse">
             <div class="segment-content">
                 <h2>For Indian Bottlers & Brand Owners</h2>
@@ -1078,7 +1077,7 @@
                     </ul>
                 </div>
 
-                <p style="margin-top: 2rem; font-size: 1rem; color: var(--color-burgundy); font-weight: 600;">Start small with 20ft container trials</p>
+                <p style="margin-top: 2rem; font-size: 1rem; color: var(--color-accent); font-weight: 600;">Start small with 20ft container trials</p>
                 <p style="color: var(--color-text-light); margin-top: 1rem;">European origin isn't a claim. It's a strategy.</p>
             </div>
             <div class="segment-visual">
@@ -1188,11 +1187,11 @@
         <div class="contact-info">
             <div class="contact-item">
                 <span>📅</span>
-                <a href="javascript:void(0)" onclick="scheduleCall()" style="color: white; text-decoration: none;">Schedule a Call</a>
+                <a href="javascript:void(0)" onclick="scheduleCall()">Schedule a Call</a>
             </div>
             <div class="contact-item">
                 <span>📧</span>
-                <a href="mailto:hello@barrelsandborders.com" style="color: white; text-decoration: none;">hello@barrelsandborders.com</a>
+                <a href="mailto:hello@barrelsandborders.com">hello@barrelsandborders.com</a>
             </div>
             <div class="contact-item">
                 <span>📞</span>
