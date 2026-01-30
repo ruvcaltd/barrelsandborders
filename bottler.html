@@ -967,24 +967,24 @@
         
         <form class="contact-form"  action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="2a355876-44e5-4b51-be0f-079e7bb8b750">
-            <input type="text" placeholder="Your Name" required>
-            <input type="text" placeholder="Bottling Company / Brand" required>
-            <input type="email" placeholder="Email" required class="full-width">
-            <input type="tel" placeholder="Phone / WhatsApp" class="full-width">
-            <select required class="full-width">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="company" placeholder="Bottling Company / Brand" required>
+            <input type="email" name="email" placeholder="Email" required class="full-width">
+            <input type="tel" name="phone" placeholder="Phone / WhatsApp" class="full-width">
+            <select name="price_point" required class="full-width">
                 <option value="">Select Target Retail Price Point</option>
                 <option value="premium">₹1800–2500 (Premium)</option>
                 <option value="super-premium">₹2500–3500 (Super Premium)</option>
                 <option value="luxury">₹3500+ (Luxury)</option>
             </select>
-            <select required class="full-width">
+            <select name="platform" required class="full-width">
                 <option value="">Which Base Platform Interests You?</option>
                 <option value="vodka">Premium Vodka Base (96% ENA)</option>
                 <option value="whisky">Whisky Blend Platform (EU Grain)</option>
                 <option value="gin">Gin & Botanical Base</option>
                 <option value="all">All of the above</option>
             </select>
-            <textarea placeholder="Current base spirit cost per litre? Monthly volume needs? Any other details?" class="full-width"></textarea>
+            <textarea name="message" placeholder="Current base spirit cost per litre? Monthly volume needs? Any other details?" class="full-width"></textarea>
             <button type="submit" class="contact-submit">Get Your Producer Matches →</button>
         </form>
     </section>
