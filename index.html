@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BARRELS & BORDERS | EU–India Spirits Matchmaking</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -80,6 +84,14 @@
             color: var(--color-black);
             text-decoration: none;
             text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 28px;
+            width: auto;
         }
 
         .logo span {
@@ -907,7 +919,7 @@
     <!-- HEADER -->
     <header>
         <div class="header-content">
-            <a href="#top" class="logo">BARRELS <span>&</span> BORDERS</a>
+            <a href="#top" class="logo"><img src="images/logo-32x32.png" alt="Barrels & Borders">BARRELS <span>&</span> BORDERS</a>
             <nav>
                 <a href="#why-now">Why Now</a>
                 <a href="#what-we-do">What We Do</a>
@@ -929,7 +941,7 @@
                 <p>With the EU–India FTA reducing spirits duties from 150% to 40%, we help both sides move fast — compliantly, profitably, and without inventory risk.</p>
                 <div class="hero-cta">
                     <button class="btn-primary" onclick="scheduleCall()">I'm a Producer</button>
-                    <button class="btn-secondary" onclick="scheduleCall()">I'm a Bottler</button>
+                    <a href="bottler.html" class="btn-secondary" style="display: inline-block; text-decoration: none;">I'm a Bottler</a>
                 </div>
             </div>
             <div class="hero-visual">
