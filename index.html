@@ -1195,7 +1195,7 @@
             </div>
             <div class="contact-item">
                 <span>📞</span>
-                <span>+44 7xxx xxx xxx</span>
+                <span onclick="revealNumber(this)">click to reveal</span>
             </div>
         </div>
     </section>
@@ -1238,7 +1238,12 @@
 
         // Schedule Call function
         function scheduleCall() {
-            window.location.href = 'mailto:hello@barrelsandborders.com?subject=Schedule%20a%20Call';
+            window.open(atob('aHR0cHM6Ly9jYWxlbmRseS5jb20vYW51LWJhcnJlbHNhbmRib3JkZXJzLzMwbWlu'), '_blank');
+        }
+
+        // Reveal phone number function
+        function revealNumber(element) {
+            element.innerHTML = atob('KzQ0IDA3NDM4Mjc0NzUz');
         }
     </script>
 </body>
